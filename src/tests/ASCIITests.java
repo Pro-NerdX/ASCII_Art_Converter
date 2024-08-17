@@ -12,14 +12,10 @@ import logic.image.ASCIIConverter;
 import logic.image.GrayScaler;
 
 public class ASCIITests extends Tests {
-    
-    /**
-     * emoji.png is of size 400 x 400
-     */
-    @Test
-    public void asciiFromPngTest() {
-        final File inputFile = new File(this.inputPath + "emoji.png");
-        final File outputFile = new File(this.outputPath + "emojiPng.txt");
+
+    private void sendHelp(final String inFileName, final String outFileName) {
+        final File inputFile = new File(this.inputPath + inFileName);
+        final File outputFile = new File(this.outputPath + outFileName);
         final GrayScaler gs = new GrayScaler();
         gs.loadImage(inputFile);
         final BufferedImage grayScaledImg = gs.getGrayScale();
@@ -31,5 +27,18 @@ public class ASCIITests extends Tests {
             e.printStackTrace();
             throw new RuntimeException("FAILED: 'asciiFromPngTest'");
         }
+    }
+    
+    /**
+     * emoji.png is of size 400 x 400
+     */
+    @Test
+    public void asciiFromPngTest() {
+        this.sendHelp("emoji.png", "emojiPng.txt");
+    }
+
+    @Test
+    public void asciiFromJpgTest() {
+        this.sendHelp("emoji.jpg", "emojiJpg.txt");
     }
 }
