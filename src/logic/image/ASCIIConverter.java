@@ -40,19 +40,29 @@ public class ASCIIConverter extends ImageLoader {
         for (int h = 0; h < height; h++) {
             for (int w = 0; w < width; w++) {
                 final int grayValue = grayValues[h][w];
-                if (grayValue < 31) {
+                if (grayValue < 25) {
                     res[h][w] = '@';
-                } else if (grayValue < 63) {
-                    res[h][w] = '%';
-                } else if (grayValue < 96) {
+                } else if (grayValue < 50) {
                     res[h][w] = '#';
-                } else if (grayValue < 128) {
-                    res[h][w] = '*';
-                } else if (grayValue < 161) {
+                } else if (grayValue < 70) {
+                    res[h][w] = '&';
+                } else if (grayValue < 90) {
+                    res[h][w] = '$';
+                } else if (grayValue < 110) {
+                    res[h][w] = '§';
+                } else if (grayValue < 130) {
+                    res[h][w] = '%';
+                } else if (grayValue < 145) {
+                    res[h][w] = '?';
+                } else if (grayValue < 160) {
                     res[h][w] = '+';
-                } else if (grayValue < 194) {
+                } else if (grayValue < 180) {
+                    res[h][w] = '*';
+                } else if (grayValue < 200) {
                     res[h][w] = '=';
-                } else if (grayValue < 225) {
+                } else if (grayValue < 215) {
+                    res[h][w] = '~';
+                } else if (grayValue < 230) {
                     res[h][w] = '-';
                 } else if (grayValue < 245) {
                     res[h][w] = ',';
