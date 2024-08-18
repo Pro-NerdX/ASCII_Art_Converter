@@ -4,6 +4,7 @@ When running the application, the program asks you to select a file. This must b
 
 ## Tested File Types
 - `.png`
+- `.jpg`
 
 # Code
 
