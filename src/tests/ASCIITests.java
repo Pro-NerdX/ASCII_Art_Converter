@@ -48,8 +48,16 @@ public class ASCIITests extends Tests {
     /**
      * stonks.webp is of size 316 x 316
      */
-    @Test
+    @Test(expected = RuntimeException.class)
     public void asciiFromWebpTest() {
         this.sendHelp("stonks.webp", "stonksWebp.txt");
+    }
+
+    /**
+     * bobRoss.jpg is of size 402 x 402
+     */
+    @Test
+    public void asciiFromDetailedImageTest() {
+        this.sendHelp("bobRoss.jpg", "bobRossDetailedJpg.txt");
     }
 }

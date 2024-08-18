@@ -40,35 +40,41 @@ public class ASCIIConverter extends ImageLoader {
         for (int h = 0; h < height; h++) {
             for (int w = 0; w < width; w++) {
                 final int grayValue = grayValues[h][w];
-                if (grayValue < 25) {
+                if (grayValue < 20) {
                     res[h][w] = '@';
-                } else if (grayValue < 50) {
-                    res[h][w] = '#';
-                } else if (grayValue < 70) {
+                } else if (grayValue < 35) {
                     res[h][w] = '&';
-                } else if (grayValue < 90) {
+                } else if (grayValue < 50) {
                     res[h][w] = '$';
-                } else if (grayValue < 110) {
+                } else if (grayValue < 65) {
                     res[h][w] = '§';
-                } else if (grayValue < 130) {
+                } else if (grayValue < 80) {
                     res[h][w] = '%';
-                } else if (grayValue < 145) {
+                } else if (grayValue < 95) {
+                    res[h][w] = '€';
+                } else if (grayValue < 110) {
+                    res[h][w] = '#';
+                } else if (grayValue < 125) {
                     res[h][w] = '?';
-                } else if (grayValue < 160) {
+                } else if (grayValue < 140) {
                     res[h][w] = '+';
-                } else if (grayValue < 180) {
+                } else if (grayValue < 155) {
                     res[h][w] = '*';
-                } else if (grayValue < 200) {
+                } else if (grayValue < 170) {
+                    res[h][w] = '°';
+                } else if (grayValue < 185) {
                     res[h][w] = '=';
-                } else if (grayValue < 215) {
+                } else if (grayValue < 200) {
                     res[h][w] = '~';
-                } else if (grayValue < 230) {
+                } else if (grayValue < 215) {
                     res[h][w] = '-';
+                } else if (grayValue < 230) {
+                    res[h][w] = ';';
                 } else if (grayValue < 245) {
                     res[h][w] = ',';
-                } else if (grayValue < 255) {
+                } else if (grayValue < 254) {
                     res[h][w] = '.';
-                } else if (grayValue == 255) {
+                } else if (grayValue < 256) {
                     res[h][w] = ' ';
                 } else {
                     throw new RuntimeException("ASCIIConverter: Gray value error!");
