@@ -6,6 +6,9 @@ When running the application, the program asks you to select a file. This must b
 - `.png`
 - `.jpg`
 
+## Illegal File Types
+- `webp`
+
 # Code
 
 ## Logic

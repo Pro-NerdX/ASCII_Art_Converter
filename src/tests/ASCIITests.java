@@ -44,4 +44,12 @@ public class ASCIITests extends Tests {
     public void asciiFromJpgTest() {
         this.sendHelp("emoji.jpg", "emojiJpg.txt");
     }
+
+    /**
+     * stonks.webp is of size 316 x 316
+     */
+    @Test
+    public void asciiFromWebpTest() {
+        this.sendHelp("stonks.webp", "stonksWebp.txt");
+    }
 }
