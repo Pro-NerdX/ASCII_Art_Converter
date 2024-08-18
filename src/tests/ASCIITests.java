@@ -37,6 +37,9 @@ public class ASCIITests extends Tests {
         this.sendHelp("emoji.png", "emojiPng.txt");
     }
 
+    /**
+     * emoji.jpg is of size 840 x 859
+     */
     @Test
     public void asciiFromJpgTest() {
         this.sendHelp("emoji.jpg", "emojiJpg.txt");
