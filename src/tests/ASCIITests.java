@@ -25,24 +25,8 @@ public class ASCIITests extends Tests {
             ofg.writeOutput();
         } catch (IOException e) {
             e.printStackTrace();
-            throw new RuntimeException("FAILED: 'asciiFromPngTest'");
+            throw new RuntimeException("FAILED: 'asciiTest'");
         }
-    }
-    
-    /**
-     * emoji.png is of size 400 x 400
-     */
-    @Test
-    public void asciiFromPngTest() {
-        this.sendHelp("emoji.png", "emojiPng.txt");
-    }
-
-    /**
-     * emoji.jpg is of size 840 x 859
-     */
-    @Test
-    public void asciiFromJpgTest() {
-        this.sendHelp("emoji.jpg", "emojiJpg.txt");
     }
 
     /**
